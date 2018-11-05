@@ -31,3 +31,10 @@ function gridBuilder(height,width) {
 
 }
 
+function main() {
+    containerBuilder();
+    gridBuilder(16,16);
+}
+
+window.onload = main();
+
