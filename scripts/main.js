@@ -9,7 +9,7 @@ function containerBuilder(){
 
 }
 
-function gridBuilder(height,width) {
+function gridBuilder(size) {
     let container = document.getElementById("container");
 
     if(container === null) {
@@ -18,9 +18,9 @@ function gridBuilder(height,width) {
     }
 
 
-    for(let i = 0; i < height; i++){
+    for(let i = 0; i < size; i++){
 
-        for(let j = 0; j < width; j++){
+        for(let j = 0; j < size; j++){
 
             let square = document.createElement("div");
             square.classList.add("square");
@@ -38,12 +38,12 @@ function gridDestroyer(){
     while(container.firstChild){
         container.removeChild(container.firstChild);
     }
-    
+
 }
 
 function main() {
     containerBuilder();
-    gridBuilder(16,16);
+    gridBuilder(16);
 }
 
 window.onload = main();
