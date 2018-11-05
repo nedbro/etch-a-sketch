@@ -1,6 +1,7 @@
-var body = document.getElementsByTagName("BODY")[0];
 
 function containerBuilder(){
+    let body = document.getElementsByTagName("BODY")[0];
+
     let container = document.createElement("div");
     container.id = "container";
 
