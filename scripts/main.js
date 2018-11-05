@@ -8,3 +8,26 @@ function containerBuilder(){
 
 }
 
+function gridBuilder(height,width) {
+    let container = document.getElementById("container");
+
+    if(container === null) {
+        containerBuilder();
+        container = document.getElementById("container");
+    }
+
+
+    for(let i = 0; i < height; i++){
+
+        for(let j = 0; j < width; j++){
+
+            let square = document.createElement("div");
+            square.classList.add("square");
+
+            container.appendChild(square);
+
+        }
+    }
+
+}
+
