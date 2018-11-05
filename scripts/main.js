@@ -56,11 +56,18 @@ function promptGrid(){
     gridBuilder(size);
 }
 
+function buttonListener(){
+    let button = document.getElementById("resetButton");
+
+    button.addEventListener("click",function(){
+        promptGrid();
+    })
+}
 
 function main() {
     containerBuilder();
     gridBuilder(16);
-
+    buttonListener();
 
 }
 
