@@ -41,9 +41,27 @@ function gridDestroyer(){
 
 }
 
+function promptGrid(){
+    let size;
+
+    while (typeof size === "undefined"){
+        let x = prompt("Type in a number(max 100) for the size of the new grid:","16");
+        let xNumber = parseInt(x);
+        
+        if(typeof xNumber === "number" && xNumber > 0 && xNumber < 101) {
+            size = xNumber;
+        }
+    }
+
+    gridBuilder(size);
+}
+
+
 function main() {
     containerBuilder();
     gridBuilder(16);
+
+
 }
 
 window.onload = main();
