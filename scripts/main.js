@@ -32,6 +32,15 @@ function gridBuilder(height,width) {
 
 }
 
+function gridDestroyer(){
+    let container = document.getElementById("container");
+
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }
+    
+}
+
 function main() {
     containerBuilder();
     gridBuilder(16,16);
