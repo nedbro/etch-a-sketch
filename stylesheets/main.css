@@ -22,8 +22,6 @@
     grid-gap: 0px;
     grid-auto-flow: row;
 
-    justify-items: stretch;
-
     margin: 4em auto;
 
     border: 1px solid black;
@@ -32,6 +30,5 @@
 }
 
 .square {
-    float:left;
     border: 1px solid grey;
 }
