@@ -1,9 +1,15 @@
 
-function containerBuilder(){
+function containerBuilder(size){
     let body = document.getElementsByTagName("BODY")[0];
 
     let container = document.createElement("div");
     container.id = "container";
+
+    size = size.toString();
+
+    container.style.display = "grid";
+    container.style.gridTemplateRows = "repeat(" + size + ", auto)";
+    container.style.gridTemplateColumns = "repeat(" + size + ", auto)";
 
     body.appendChild(container);
 
@@ -11,7 +17,7 @@ function containerBuilder(){
 
 function gridBuilder(size) {
   
-    containerBuilder();
+    containerBuilder(size);
     container = document.getElementById("container");
 
 
