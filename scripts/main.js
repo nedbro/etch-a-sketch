@@ -10,12 +10,9 @@ function containerBuilder(){
 }
 
 function gridBuilder(size) {
-    let container = document.getElementById("container");
-
-    if(container === null) {
-        containerBuilder();
-        container = document.getElementById("container");
-    }
+  
+    containerBuilder();
+    container = document.getElementById("container");
 
 
     for(let i = 0; i < size; i++){
@@ -32,12 +29,14 @@ function gridBuilder(size) {
 
 }
 
-function gridDestroyer(){
+function containerDestroyer(){
     let container = document.getElementById("container");
 
     while(container.firstChild){
         container.removeChild(container.firstChild);
     }
+
+    container.parentNode.removeChild(container);
 
 }
 
@@ -53,6 +52,7 @@ function promptGrid(){
         }
     }
 
+    containerDestroyer();
     gridBuilder(size);
 }
 
@@ -65,7 +65,6 @@ function buttonListener(){
 }
 
 function main() {
-    containerBuilder();
     gridBuilder(16);
     buttonListener();
 
