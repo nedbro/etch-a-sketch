@@ -28,6 +28,10 @@ function gridBuilder(size) {
             let square = document.createElement("div");
             square.classList.add("square");
 
+            square.addEventListener("mouseover",function(){
+                squareColor(this);
+            });
+
             container.appendChild(square);
 
         }
@@ -68,6 +72,15 @@ function buttonListener(){
     button.addEventListener("click",function(){
         promptGrid();
     })
+}
+
+function squareColor(obj) {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    obj.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+
 }
 
 function main() {
